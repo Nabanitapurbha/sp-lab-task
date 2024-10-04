@@ -1,0 +1,280 @@
+1.//write a c program that takes two numbers and prints if the sum is even or odd
+
+#include<stdio.h>
+int main(){
+int num1,num2,sum;
+
+printf("enter the first number:");
+scanf("%d",&num1);
+printf("enter the second number:");
+scanf("%d",&num2);
+sum=num1+num2;
+if(sum%2==0)
+{
+    printf("even number");
+}
+else{
+    printf("odd number");
+}
+
+}
+
+
+2.//write a c program to check whether a given number is odd or even using an if-else statement
+
+#include<stdio.h>
+int main(){
+int num;
+printf("enter a number:");
+scanf("%d",&num);
+if(num%2==0){
+printf("number is even");}
+else{
+    printf("number is odd");
+}
+}
+
+
+3.//write a c program to find the largest  of three numbers using nested if-else condition
+
+#include<stdio.h>
+int main()
+{
+    int num1,num2,num3,largest=0;
+    printf("enter three numbers:");
+    scanf("%d%d%d",&num1,&num2,&num3);
+    if(num1>num2&&num1>num3)
+    {
+        printf("the largest is num1");
+        
+    }
+    else if(num2>num1&&num2>num3)
+    {
+        printf("the largest is number2");
+    }
+    else{
+        printf("the largest is number3");
+    }
+}
+
+
+4.//write a program that takes a number and determines wheather it's positive ,negative or zero using if-else statement.
+
+#include<stdio.h>
+int main()
+{
+    int number;
+    printf("enter a number:");
+    scanf("%d",&number);
+    if(number>0)
+    {
+        printf("it is positive");
+    }
+    else if(number<0)
+    {
+        printf("it is negative");}
+        else{
+            printf("it is zero");
+        }
+
+
+    }
+
+
+
+5.//write a program to create a simple calculation using the switch case statement.the program should perform addition,subtraction,multiplication and divition based on user input
+
+#include<stdio.h>
+int main()
+{
+
+    char ch;
+    scanf("%c",&ch);
+    double m,n;
+    scanf("%lf %lf ",&m,&n);
+    switch(ch)
+    {
+    case'+':
+        {printf("%lf\n",m+n);
+        break;
+    }
+    case'-':
+      {printf("%lf\n",m-n);
+        break;
+    }
+    case'*':
+       {
+        printf("%lf\n",m*n);
+        break;
+    }
+    case'/':
+        {printf("%lf\n",m/n);
+        break;
+    }
+    default:
+    printf(" Nothing\n");
+}return 0;
+}
+
+
+
+6.//write a program that takes the lenghts of three sides of a triangle and determines if the tringle is valid based on the condition of valid triangle using conditional statement
+
+#include<stdio.h>
+int main()
+{
+    double   side1,side2, side3;
+    scanf("%f%f%f",&side1,& side2,& side3);
+    if(side1+ side2> side3&&  side2+ side3> side1 &&  side1+side3> side2 )
+    {
+        printf("tringle is valid");
+    }
+    else{
+        ("tringle is not valid");
+    }
+    return 0;
+}
+
+
+7.//write a c program to reverse a given integerusing a while loop.
+#include<stdio.h>
+int main()
+{
+    int n,m,r;
+    printf("enter an integer:");
+    scanf("%d,&n");
+    while(n !=0)
+    {
+        r=n%10;
+        m=m*10+r;
+        n=n/10;
+    }
+    printf("%d\n",m);
+    return 0;
+}
+
+
+8.//write a program to clculate the area of a circle given it's radius
+
+#include<stdio.h>
+int main(){
+float radius,area;
+printf("enter the radius of a circle\n");
+scanf("%f",&radius);
+area=3.1416*radius*radius;
+printf("area of the circle is %f",area);
+return 0;
+
+}
+
+9.//write a program to find the maximum element in an array using loops and conditional statement
+
+#include<stdio.h>
+int main()
+{
+    int n,max;
+    printf("how many numbers:");
+    scanf("%d",&n);
+
+    int arr[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    max=arr[0];
+    for(int i=1;i<n;i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+    printf("maximum number:%d\n",max);
+    return 0;
+}
+
+10.//write a program that takes an array of integers and finds the sum of its elements using a loop
+
+#include<stdio.h>
+int main()
+{
+    int a[1000],sum=0,n;
+    printf("how many integer:");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);}
+        for(int i=0;i<n;i++){
+                sum=sum+a[i];}
+        printf("sum=%d\n",sum);
+}
+
+
+
+11.//write a program to reverse the elements of an array using a loop
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("how many numbers:");
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("reverse element:");
+    for(int i=n-1;i>=0;i--){
+        printf("%d\n",arr[i]);
+    }
+    return 0;
+}
+
+
+12.//write a program to calculate the sum of the first n natural numbers using a loop
+
+#include<stdio.h>
+int main()
+{
+    int i, n,sum=0;
+    printf("enter number:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        sum=sum+i;
+}
+    printf("the sum of n natural number:%d",sum);
+
+}
+
+13.//write a c program that takes five numbers as input and calculates their avarage
+
+#include<stdio.h>
+int main(){
+
+int num1,num2,num3,num4,num5;
+float average;
+printf("enter five numbers:");
+scanf("%d%d%d%d%d",&num1,&num2,&num3,&num4,&num5);
+average=(num1+num2+num3+num4+num5)/5;
+printf("the average of five numbers is %f",average);
+return 0;
+
+
+
+}
+
+
+
+14.//write a program that prints number from 1 to n using a loop
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    for(int i=1;i<=n;i++)
+    {
+        printf("%d\n",i);
+    }
+}
+
+
+
